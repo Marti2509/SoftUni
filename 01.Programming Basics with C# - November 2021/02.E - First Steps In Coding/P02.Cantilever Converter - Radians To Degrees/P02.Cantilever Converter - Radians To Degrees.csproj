@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>P02.Cantilever_Converter_Radians_To_Degrees</RootNamespace>
+    <RootNamespace>P02.Cantilever_Converter _ Radians_To_Degrees</RootNamespace>
   </PropertyGroup>
 
 </Project>
