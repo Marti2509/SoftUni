@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.Console Program Hello SoftUni", "P01.Console Program Hello SoftUni\P01.Console Program Hello SoftUni.csproj", "{F6F787D6-9CDF-49DD-A32B-0470C47A8F92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.ConsoleProgramHelloSoftUni", "P01.ConsoleProgramHelloSoftUni\P01.ConsoleProgramHelloSoftUni.csproj", "{F6F787D6-9CDF-49DD-A32B-0470C47A8F92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.The Number From 1 To 10", "P02.The Number From 1 To 10\P02.The Number From 1 To 10.csproj", "{83B4A5DC-413D-4734-B793-63187F2EE028}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.TheNumberFrom1To10", "P02.TheNumberFrom1To10\P02.TheNumberFrom1To10.csproj", "{83B4A5DC-413D-4734-B793-63187F2EE028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Calculate The Face Of A Rectangle", "P03.Calculate The Face Of A Rectangle\P03.Calculate The Face Of A Rectangle.csproj", "{92BC7548-6A68-48B5-A8FB-17A2DD15B12A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.CalculateTheFaceOfARectangle", "P03.CalculateTheFaceOfARectangle\P03.CalculateTheFaceOfARectangle.csproj", "{92BC7548-6A68-48B5-A8FB-17A2DD15B12A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.Converter - Inches To Centimeters", "P04.Converter - Inches To Centimeters\P04.Converter - Inches To Centimeters.csproj", "{2B68EA94-975A-48CD-8905-D98D9E54C5F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.Converter-InchesToCentimeters", "P04.Converter-InchesToCentimeters\P04.Converter-InchesToCentimeters.csproj", "{2B68EA94-975A-48CD-8905-D98D9E54C5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.Greetings By Name", "P05.Greetings By Name\P05.Greetings By Name.csproj", "{E6F7C125-615F-445A-A83D-93A14B05D028}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.GreetingsByName", "P05.GreetingsByName\P05.GreetingsByName.csproj", "{E6F7C125-615F-445A-A83D-93A14B05D028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.Combining Text And Numbers", "P06.Combining Text And Numbers\P06.Combining Text And Numbers.csproj", "{C4DD77D3-7CAF-4314-963B-0D36ABCE1376}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.CombiningTextAndNumbers", "P06.CombiningTextAndNumbers\P06.CombiningTextAndNumbers.csproj", "{C4DD77D3-7CAF-4314-963B-0D36ABCE1376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.Preparation Of Projects", "P07.Preparation Of Projects\P07.Preparation Of Projects.csproj", "{4B1006C7-874C-4306-9CAB-E481A7BC747B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.PreparationOfProjects", "P07.PreparationOfProjects\P07.PreparationOfProjects.csproj", "{4B1006C7-874C-4306-9CAB-E481A7BC747B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.Pet Shop", "P08.Pet Shop\P08.Pet Shop.csproj", "{0EC0E964-5A81-42A2-8271-DD3E772B80C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.PetShop", "P08.PetShop\P08.PetShop.csproj", "{0EC0E964-5A81-42A2-8271-DD3E772B80C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09.Landscaping Of Yards", "P09.Landscaping Of Yards\P09.Landscaping Of Yards.csproj", "{E0A615C3-8C38-419B-80C2-0642D1E91ADF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09.LandscapingOfYards", "P09.LandscapingOfYards\P09.LandscapingOfYards.csproj", "{E0A615C3-8C38-419B-80C2-0642D1E91ADF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
