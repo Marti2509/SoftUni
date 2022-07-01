@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.The Bigger Number", "P02.The Bigger Number\P02.The Bigger Number.csproj", "{D18ADF90-F562-4FB6-9B35-9530D482DFF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.TheBiggerNumber", "P02.TheBiggerNumber\P02.TheBiggerNumber.csproj", "{D18ADF90-F562-4FB6-9B35-9530D482DFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.Excellent Grade", "P01.Excellent Grade\P01.Excellent Grade.csproj", "{9127ECB9-55B1-4613-8895-9446807F2DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.ExcellentGrade", "P01.ExcellentGrade\P01.ExcellentGrade.csproj", "{9127ECB9-55B1-4613-8895-9446807F2DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Even Or Odd", "P03.Even Or Odd\P03.Even Or Odd.csproj", "{0B701799-C8EE-44BC-8971-B4D00BAA05A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.EvenOrOdd", "P03.EvenOrOdd\P03.EvenOrOdd.csproj", "{0B701799-C8EE-44BC-8971-B4D00BAA05A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.Guess The Password", "P04.Guess The Password\P04.Guess The Password.csproj", "{24806A97-7DA9-4307-A2AD-2E767FBEE03E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.GuessThePassword", "P04.GuessThePassword\P04.GuessThePassword.csproj", "{24806A97-7DA9-4307-A2AD-2E767FBEE03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.Number From 100 To 200", "P05.Number From 100 To 200\P05.Number From 100 To 200.csproj", "{349EE14C-3A90-4B9D-805E-85975AA5E95A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.NumberFrom100To200", "P05.NumberFrom100To200\P05.NumberFrom100To200.csproj", "{349EE14C-3A90-4B9D-805E-85975AA5E95A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.Speed Information", "P06.Speed Information\P06.Speed Information.csproj", "{BD2A8606-6419-472B-9056-EB076483F04B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.SpeedInformation", "P06.SpeedInformation\P06.SpeedInformation.csproj", "{BD2A8606-6419-472B-9056-EB076483F04B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.Faces Of Figures", "P07.Faces Of Figures\P07.Faces Of Figures.csproj", "{1F490783-173F-4F7A-ADAE-B44F5350F1F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.FacesOfFigures", "P07.FacesOfFigures\P07.FacesOfFigures.csproj", "{1F490783-173F-4F7A-ADAE-B44F5350F1F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
