@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.Summation of seconds", "P01.Summation of seconds\P01.Summation of seconds.csproj", "{E06E9B62-D53A-457C-8234-5CAAFA0FB85E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.SummationOfSeconds", "P01.SummationOfSeconds\P01.SummationOfSeconds.csproj", "{E06E9B62-D53A-457C-8234-5CAAFA0FB85E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.Bonus points", "P02.Bonus points\P02.Bonus points.csproj", "{A1DD13F1-858F-47B1-8DC8-CFDB30345018}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.BonusPoints", "P02.BonusPoints\P02.BonusPoints.csproj", "{A1DD13F1-858F-47B1-8DC8-CFDB30345018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Time + 15 minutes", "P03.Time + 15 minutes\P03.Time + 15 minutes.csproj", "{C7075DC6-33EE-4C61-AAF7-E13DE7540CF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Time+15Minutes", "P03.Time+15Minutes\P03.Time+15Minutes.csproj", "{C7075DC6-33EE-4C61-AAF7-E13DE7540CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.Toy store", "P04.Toy store\P04.Toy store.csproj", "{7DEB8D37-219B-4773-BF7B-BD05226A5300}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.ToyStore", "P04.ToyStore\P04.ToyStore.csproj", "{7DEB8D37-219B-4773-BF7B-BD05226A5300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.Godzilla vs Kong", "P05.Godzilla vs Kong\P05.Godzilla vs Kong.csproj", "{D4769569-EBD3-4AB4-9838-2EBDB8A53B5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.GodzillaVSKong", "P05.GodzillaVSKong\P05.GodzillaVSKong.csproj", "{D4769569-EBD3-4AB4-9838-2EBDB8A53B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.Swimming world record", "P06.Swimming world record\P06.Swimming world record.csproj", "{473099B3-C452-4C60-B8D1-5B88E42309F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.SwimmingWorldRecord", "P06.SwimmingWorldRecord\P06.SwimmingWorldRecord.csproj", "{473099B3-C452-4C60-B8D1-5B88E42309F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07.Shopping", "P07.Shopping\P07.Shopping.csproj", "{8B31BC77-2168-4F6F-9893-B10C237D4D54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.Lunch break", "P08.Lunch break\P08.Lunch break.csproj", "{8A9836EB-B5FB-4909-B993-47099F5A7BAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08.LunchBreak", "P08.LunchBreak\P08.LunchBreak.csproj", "{8A9836EB-B5FB-4909-B993-47099F5A7BAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
