@@ -6,12 +6,12 @@ namespace Restaurant
 {
     public class Coffee : HotBeverage
     {
-        public Coffee(string name, double coffeine)
+        public Coffee(string name, double caffeine)
             : base(name, 3.50m, 50.00)
         {
-            Coffeine = coffeine;
+            Caffeine = caffeine;
         }
 
-        public double Coffeine { get; set; }
+        public double Caffeine { get; set; }
     }
 }
