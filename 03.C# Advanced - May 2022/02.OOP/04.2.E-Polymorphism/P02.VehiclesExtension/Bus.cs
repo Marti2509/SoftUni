@@ -21,12 +21,12 @@ namespace Vehicles
 
         public string DriveEmpty(double distance)
         {
-            if (FuelQuantity > FuelConsumption - FuelConsumptionConst * distance)
+            if (FuelQuantity < (FuelConsumption - FuelConsumptionConst) * distance)
             {
                 return $"{this.GetType().Name} needs refueling";
             }
 
-            FuelQuantity -= FuelConsumption - FuelConsumptionConst * distance;
+            FuelQuantity -= (FuelConsumption - FuelConsumptionConst) * distance;
             
             return $"{this.GetType().Name} travelled {distance} km";
         }
