@@ -1,6 +1,7 @@
 function main(input){
-    let name = input[0];
+    let name = input;
 
     console.log(`Hello, ${name}!`);
 }
-main();
+
+main(["marto"]);

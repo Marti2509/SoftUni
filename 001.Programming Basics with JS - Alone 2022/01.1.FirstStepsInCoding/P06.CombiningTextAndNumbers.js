@@ -6,4 +6,5 @@ function main(input){
 
     console.log(`You are ${firstName} ${lastName}, a ${age}-years old person from ${town}.`);
 }
-main();
+
+main(["marto", "simov", 15, "sofia"]);
