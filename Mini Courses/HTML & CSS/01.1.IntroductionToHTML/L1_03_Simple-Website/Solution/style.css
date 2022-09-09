@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: "helvetica", sans-serif;
+}
+
+nav {
+    background-color: #234467;
+    padding: 3px;
+    text-align: center;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 8px;
+}
+
+main {
+    margin: 120px 420px 351px 420px;
+    font-family: "helvetica", sans-serif;
+}
+
+main section:nth-child(1) {
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    background-color: #234467;
+    padding: 3px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
