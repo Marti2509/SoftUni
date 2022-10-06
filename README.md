@@ -8,5 +8,8 @@
 ### [03.C# Advanced](https://github.com/Marti2509/SoftUni/tree/main/03.C%23%20Advanced%20-%20May%202022)
 ### [04.JS Advanced](https://github.com/Marti2509/SoftUni/tree/main/04.JS%20Advanced%20-%20September%202022)
 
+## Mini Courses
+### [01.HTML & CSS](https://github.com/Marti2509/SoftUni/tree/main/Mini%20Courses/HTML%20%26%20CSS)
+
 ## 📝 License
 This project is [MIT](https://github.com/Marti2509/SoftUni/blob/main/LICENSE) licensed. ©
