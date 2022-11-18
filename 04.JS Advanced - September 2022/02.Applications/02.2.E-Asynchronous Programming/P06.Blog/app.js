@@ -38,26 +38,25 @@ async function attachEvents() {
         
         let counter = 0;
 
-        let commentsResponse = await fetch(commentsUrl);
-        let commentsData = await commentsResponse.json();
-
         let postsResponse = await fetch(postsUrl);
         let postsData = await postsResponse.json();
 
         for (const currPost in postsData) {
             if (currPost === value) {
                 post = postsData[currPost];
+                postTitleElement.textContent = post.title;
+                postBodyElement.textContent = post.body;
             }
         }
+
+        let commentsResponse = await fetch(commentsUrl);
+        let commentsData = await commentsResponse.json();
 
         for (const comment in commentsData) {
             if (value === commentsData[comment].postId) {
                 comments[counter++] = commentsData[comment];
             }
         }
-        
-        postTitleElement.textContent = post.title;
-        postBodyElement.textContent = post.body;
         
         for (const comment of comments) {
             let li = document.createElement("li");
