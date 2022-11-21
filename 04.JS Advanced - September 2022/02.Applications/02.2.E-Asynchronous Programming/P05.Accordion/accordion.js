@@ -10,13 +10,18 @@ async function solution() {
     let currAccordion = document.createElement("div");
     currAccordion.classList.add("accordion");
 
+    let currUrl = `http://localhost:3030/jsonstore/advanced/articles/details/${item._id}`;
+
+    let currResponse = await fetch(currUrl);
+    let currData = await currResponse.json();
+
     currAccordion.innerHTML = `
                 <div class="head">
                     <span>${item.title}</span>
                     <button class="button" id="${item._id}">More</button>
                 </div>
                 <div class="extra">
-                    <p></p>
+                    <p>${currData.content}</p>
             </div>
         `;
 
@@ -31,14 +36,6 @@ async function solution() {
 
   async function click(e) {
     let btn = e.target;
-
-    let currUrl = `http://localhost:3030/jsonstore/advanced/articles/details/${btn.id}`;
-
-    let currResponse = await fetch(currUrl);
-    let currData = await currResponse.json();
-
-    btn.parentElement.parentElement.childNodes[3].textContent =
-      currData.content;
 
     if (btn.textContent === "More") {
       btn.textContent = "Less";
