@@ -10,7 +10,7 @@
 #### &nbsp; &nbsp; &nbsp; &nbsp; [03.2.OOP](https://github.com/Marti2509/SoftUni/tree/main/03.C%23%20Advanced%20-%20May%202022/02.OOP) - [SoftUni Site](https://softuni.bg/trainings/3700/csharp-oop-june-2022)
 ### [04.JS Advanced](https://github.com/Marti2509/SoftUni/tree/main/04.JS%20Advanced%20-%20September%202022)
 #### &nbsp; &nbsp; &nbsp; &nbsp; [04.1.Advanced](https://github.com/Marti2509/SoftUni/tree/main/04.JS%20Advanced%20-%20September%202022/01.Advanced) - [SoftUni Site](https://softuni.bg/trainings/3846/js-advanced-september-2022)
-#### &nbsp; &nbsp; &nbsp; &nbsp; 04.2.Applications - hasn't started - [SoftUni Site](https://softuni.bg/trainings/3847/js-applications-october-2022)
+#### &nbsp; &nbsp; &nbsp; &nbsp; [4.2.Applications](https://github.com/Marti2509/SoftUni/tree/main/04.JS%20Advanced%20-%20September%202022/02.Applications) - [SoftUni Site](https://softuni.bg/trainings/3847/js-applications-october-2022)
 
 ## Mini Courses
 ### [01.HTML & CSS](https://github.com/Marti2509/SoftUni/tree/main/Mini%20Courses/HTML%20%26%20CSS) - [SoftUni Site](https://softuni.bg/trainings/2286/html-css-mini-course)
