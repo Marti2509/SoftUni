@@ -7,7 +7,7 @@ export function getUserData() {
     return data;
 }
 
-export function clearUserDara() {
+export function clearUserData() {
     sessionStorage.removeItem('userData');
 }
 

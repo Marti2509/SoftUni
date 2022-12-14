@@ -20,7 +20,7 @@ async function request(method, url, data) {
     }
 
     try {
-        const response = await fetch(host + url, option);
+        const response = await fetch(host + url, options);
 
         if (response.status == 204) {
             return response;
