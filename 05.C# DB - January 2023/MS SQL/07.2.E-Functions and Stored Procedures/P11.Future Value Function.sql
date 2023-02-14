@@ -1,4 +1,7 @@
-CREATE FUNCTION ufn_CalculateFutureValue(@I DECIMAL, @R FLOAT, @T INT)
+USE Bank
+GO
+
+CREATE FUNCTION ufn_CalculateFutureValue(@I DECIMAL(18, 4), @R FLOAT, @T INT)
 RETURNS DECIMAL(18, 4) AS
 BEGIN
 	DECLARE @result DECIMAL(18, 4)
