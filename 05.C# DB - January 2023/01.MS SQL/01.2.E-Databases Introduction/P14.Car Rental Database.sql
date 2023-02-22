@@ -1,0 +1,147 @@
+USE master
+GO
+
+CREATE DATABASE CarRental
+GO
+
+USE CarRental
+GO
+
+CREATE TABLE Categories
+(
+	Id BIGINT NOT NULL IDENTITY,
+	CategoryName NVARCHAR(40) NOT NULL,
+	DailyRate MONEY,
+	WeeklyRate MONEY,
+	MonthlyRate MONEY NOT NULL,
+	WeekendRate MONEY
+)
+
+ALTER TABLE Categories
+ADD CONSTRAINT [PK_Categories_Id]
+PRIMARY KEY (Id)
+
+CREATE TABLE Cars
+(
+	Id BIGINT NOT NULL IDENTITY,
+	PlateNumber SMALLINT NOT NULL,
+	Manufacturer NVARCHAR(40) NOT NULL,
+	Model NVARCHAR(30) NOT NULL,
+	CarYear SMALLINT NOT NULL,
+	CategoryId BIGINT NOT NULL,
+	Doors TINYINT,
+	Picture VARBINARY(MAX),
+	Condition NVARCHAR(20),
+	Available BIT NOT NULL
+)
+
+ALTER TABLE Cars
+ADD CONSTRAINT [PK_Cars_Id]
+PRIMARY KEY (Id)
+
+ALTER TABLE Cars
+ADD CONSTRAINT [FK_CategoryId]
+FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
+
+CREATE TABLE Employees
+(
+	Id BIGINT NOT NULL IDENTITY,
+	FirstName NVARCHAR(25) NOT NULL,
+	LastName NVARCHAR(25) NOT NULL,
+	Title NVARCHAR(50),
+	Notes NVARCHAR(MAX)
+)
+
+ALTER TABLE Employees
+ADD CONSTRAINT [PK_Employees_Id]
+PRIMARY KEY (Id)
+
+CREATE TABLE Customers
+(
+	Id BIGINT NOT NULL IDENTITY,
+	DriverLicenceNumber INT NOT NULL,
+	FullName NVARCHAR(50) NOT NULL,
+	[Address] NVARCHAR(50) NOT NULL,
+	City NVARCHAR(30) NOT NULL,
+	ZIPCode SMALLINT NOT NULL,
+	Notes NVARCHAR(MAX)
+)
+
+ALTER TABLE Customers
+ADD CONSTRAINT [PK_Customers_Id]
+PRIMARY KEY (Id)
+
+CREATE TABLE RentalOrders
+(
+	Id BIGINT NOT NULL IDENTITY,
+	EmployeeId BIGINT NOT NULL,
+	CustomerId BIGINT NOT NULL,
+	CarId BIGINT NOT NULL,
+	TankLevel TINYINT,
+	KilometrageStart INT NOT NULL,
+	KilometrageEnd INT NOT NULL,
+	TotalKilometrage INT NOT NULL,
+	StartDate DATE NOT NULL,
+	EndDate DATE NOT NULL,
+	TotalDays SMALLINT NOT NULL,
+	RateApplied TINYINT,
+	TaxRate MONEY NOT NULL,
+	OrderStatus NVARCHAR(20),
+	Notes NVARCHAR(MAX)
+)
+
+ALTER TABLE RentalOrders
+ADD CONSTRAINT [PK_RentalOrders_Id]
+PRIMARY KEY (Id)
+
+ALTER TABLE RentalOrders
+ADD CONSTRAINT [FK_EmployeeId]
+FOREIGN KEY (EmployeeId) REFERENCES Employees(Id)
+
+ALTER TABLE RentalOrders
+ADD CONSTRAINT [FK_CustomerId]
+FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
+
+ALTER TABLE RentalOrders
+ADD CONSTRAINT [FK_CarId]
+FOREIGN KEY (CarId) REFERENCES Cars(Id)
+
+INSERT INTO Categories
+VALUES
+('Sports Car', NULL, NULL, 15000, NULL),
+('Hatchback', NULL, NULL, 8000, NULL),
+('Crossover', NULL, NULL, 10000, NULL);
+
+SELECT * FROM Categories
+
+INSERT INTO Cars
+VALUES
+(1548, 'Audi', 'RS8', 2022, 2, NULL, NULL, NULL, 0),
+(6533, 'Tesla', 'Model 3', 2023, 1, NULL, NULL, NULL, 1),
+(2489, 'Mazda', 'Model 6', 2019, 3, NULL, NULL, NULL, 1);
+
+SELECT * FROM Cars
+
+INSERT INTO Employees
+VALUES
+('Marto', 'Simov', 'Boss', NULL),
+('Emi', 'Simova', 'Manager', NULL),
+('Misho', 'Simov', 'Worker', NULL);
+
+SELECT * FROM Employees
+
+INSERT INTO Customers
+VALUES
+('53487593', 'Martin Dimitrov Simov', 'Bul. Praga 16', 'Sofia', 1000, NULL),
+('68451002', 'Emilia Dimitrova Simova', 'Bul. Praga 16', 'Sofia', 1000, NULL),
+('19452620', 'Mihail Milkov Simov', 'Bul. Praga 16', 'Sofia', 1000, NULL);
+
+SELECT * FROM Customers
+
+INSERT INTO RentalOrders
+VALUES
+(2, 1, 2, 100, 38000, 40000, 2000, '2022-09-25', CURRENT_TIMESTAMP, 100, NULL, 1000, 'READY', NULL),
+(3, 2, 1, 70, 20000, 25000, 5000, '2020-12-09', CURRENT_TIMESTAMP, 300, NULL, 3000, 'DRIVING', NULL),
+(1, 3, 3, 10, 80000, 90000, 10000, '2023-01-03', CURRENT_TIMESTAMP, 10, NULL, 5000, 'CLEANING', NULL);
+
+SELECT * FROM RentalOrders
