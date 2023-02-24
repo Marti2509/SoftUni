@@ -1,5 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Diagnostics.SymbolStore;
 using System.Text;
+using static Azure.Core.HttpHeader;
 
 namespace Problems
 {
@@ -10,12 +12,12 @@ namespace Problems
             using SqlConnection connection = new SqlConnection(Config.sqlConnectionData);
             await connection.OpenAsync();
 
-            string result = await AddMinion(connection);
+            string result = await PrintAllMinionNames(connection);
             Console.WriteLine(result);
         }
 
         // PROBLEM 2
-        async static Task<string> VillainNames(SqlConnection connection)
+        static async Task<string> VillainNames(SqlConnection connection)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -145,6 +147,106 @@ namespace Problems
             await addToMinionsVillains.ExecuteNonQueryAsync();
 
             sb.AppendLine($"Successfully added {minionName} to be minion of {villainName}.");
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // PROBLEM 5
+        static async Task<string> ChangeTownNamesCasing(SqlConnection connection)
+        {
+            string? countryName = Console.ReadLine();
+
+            StringBuilder sb = new StringBuilder();
+
+            SqlCommand townsCommand = new SqlCommand(Queries.changeTownNamesCasing1, connection);
+            townsCommand.Parameters.AddWithValue("@countryName", countryName);
+
+            object? town = await townsCommand.ExecuteScalarAsync();
+
+            if (town == null)
+            {
+                return "No town names were affected.";
+            }
+
+            SqlCommand updateTowns = new SqlCommand(Queries.changeTownNamesCasing2, connection);
+            updateTowns.Parameters.AddWithValue("@countryName", countryName);
+
+            int count = await updateTowns.ExecuteNonQueryAsync();
+
+            sb.AppendLine($"{count} town names were affected.");
+
+            SqlDataReader reader = await townsCommand.ExecuteReaderAsync();
+
+            List<string> towns = new List<string>();
+
+            while (await reader.ReadAsync())
+            {
+                towns.Add((string)reader["Name"]);
+            }
+
+            sb.AppendLine($"[{string.Join(", ", towns)}]");
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // PROBLEM 6
+        static async Task<string> RemoveVillain(SqlConnection connection)
+        {
+            int villainId = int.Parse(Console.ReadLine());
+
+            StringBuilder sb = new StringBuilder();
+
+            SqlCommand villainCommand = new SqlCommand(Queries.removeVillain1, connection);
+            villainCommand.Parameters.AddWithValue("@villainId", villainId);
+
+            object? villainName = await villainCommand.ExecuteScalarAsync();
+
+            if (villainName == null)
+            {
+                return "No such villain was found.";
+            }
+
+            SqlCommand minionsCommand = new SqlCommand(Queries.removeVillain2, connection);
+            minionsCommand.Parameters.AddWithValue("@villainId", villainId);
+
+            int freeMinionsCount = await minionsCommand.ExecuteNonQueryAsync();
+
+            SqlCommand removeVillainCommand = new SqlCommand(Queries.removeVillain3, connection);
+            removeVillainCommand.Parameters.AddWithValue("@villainId", villainId);
+
+            await removeVillainCommand.ExecuteNonQueryAsync();
+
+            sb.AppendLine($"{villainName} was deleted.");
+            sb.AppendLine($"{freeMinionsCount} minions were released.");
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // PROBLEM 7
+        static async Task<string> PrintAllMinionNames(SqlConnection connection)
+        {
+            List<string> minions = new List<string>();
+            StringBuilder sb = new StringBuilder();
+
+            SqlCommand getAllMinionsCommand = new SqlCommand(Queries.printAllMinionNames, connection);
+
+            SqlDataReader reader = await getAllMinionsCommand.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                minions.Add((string)reader["Name"]);
+            }
+
+            for (int i = 0; i < minions.Count / 2; i++)
+            {
+                sb.AppendLine(minions[i]);
+                sb.AppendLine(minions[minions.Count - 1 - i]);
+            }
+
+            if (minions.Count % 2 == 1)
+            {
+                sb.AppendLine(minions[minions.Count / 2]);
+            }
 
             return sb.ToString().TrimEnd();
         }

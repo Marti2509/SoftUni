@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Azure.Core.HttpHeader;
 
 namespace Problems
 {
@@ -41,5 +42,24 @@ namespace Problems
         public const string addMinion6 = @"INSERT INTO Minions (Name, Age, TownId) VALUES (@name, @age, @townId)";
                             
         public const string addMinion7 = @"INSERT INTO MinionsVillains (MinionId, VillainId) VALUES (@minionId, @villainId)";
+
+        public const string changeTownNamesCasing1 = @"SELECT t.Name 
+                                                        FROM Towns as t
+                                                        JOIN Countries AS c ON c.Id = t.CountryCode
+                                                       WHERE c.Name = @countryName";
+
+        public const string changeTownNamesCasing2 = @"UPDATE Towns
+                                                          SET Name = UPPER(Name)
+                                                        WHERE CountryCode = (SELECT c.Id 
+                                                                               FROM Countries AS c 
+                                                                              WHERE c.Name = @countryName)";
+
+        public const string removeVillain1 = @"SELECT Name FROM Villains WHERE Id = @villainId";
+
+        public const string removeVillain2 = @"DELETE FROM MinionsVillains WHERE VillainId = @villainId";
+
+        public const string removeVillain3 = @"DELETE FROM Villains WHERE Id = @villainId";
+
+        public const string printAllMinionNames = @"SELECT Name FROM Minions";
     }
 }
