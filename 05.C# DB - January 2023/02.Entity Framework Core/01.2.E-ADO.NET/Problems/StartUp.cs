@@ -1,5 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 using System.Diagnostics.SymbolStore;
+using System.Reflection.Metadata;
 using System.Text;
 using static Azure.Core.HttpHeader;
 
@@ -12,7 +14,7 @@ namespace Problems
             using SqlConnection connection = new SqlConnection(Config.sqlConnectionData);
             await connection.OpenAsync();
 
-            string result = await PrintAllMinionNames(connection);
+            string result = await IncreaseAgeStoredProcedure(connection);
             Console.WriteLine(result);
         }
 
@@ -246,6 +248,64 @@ namespace Problems
             if (minions.Count % 2 == 1)
             {
                 sb.AppendLine(minions[minions.Count / 2]);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // PROBLEM 8
+        static async Task<string> IncreaseMinionAge(SqlConnection connection)
+        {
+            int[] minionsIds = Console.ReadLine()
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+
+            StringBuilder sb = new StringBuilder();
+
+            SqlCommand updateMinionsAgeCommand = new SqlCommand(Queries.increaseMinionAge2, connection);
+
+            for (int i = 0; i < minionsIds.Length; i++)
+            {
+                updateMinionsAgeCommand.Parameters.AddWithValue("@Id", minionsIds[i]);
+
+                await updateMinionsAgeCommand.ExecuteNonQueryAsync();
+
+                updateMinionsAgeCommand.Parameters.RemoveAt(0);
+            }
+
+            SqlCommand selectAllMinionsCommand = new SqlCommand(Queries.increaseMinionAge1, connection);
+
+            SqlDataReader reader = await selectAllMinionsCommand.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                sb.AppendLine($"{reader["Name"]} {reader["Age"]}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // PROBLEM 9
+        static async Task<string> IncreaseAgeStoredProcedure (SqlConnection connection)
+        {
+            int minionId = int.Parse(Console.ReadLine());
+
+            StringBuilder sb = new StringBuilder();
+
+            SqlCommand updateMinionAge = new SqlCommand(Queries.increaseAgeStoredProcedure1, connection);
+            updateMinionAge.Parameters.AddWithValue("@MinionId", minionId);
+
+            await updateMinionAge.ExecuteNonQueryAsync();
+
+            SqlCommand getMinionCommand = new SqlCommand(Queries.increaseAgeStoredProcedure2, connection);
+            getMinionCommand.Parameters.AddWithValue("@Id", minionId);
+
+            SqlDataReader reader = await getMinionCommand.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                sb.AppendLine($"{reader["Name"]} – {reader["Age"]} years old");
             }
 
             return sb.ToString().TrimEnd();

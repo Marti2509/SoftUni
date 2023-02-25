@@ -61,5 +61,16 @@ namespace Problems
         public const string removeVillain3 = @"DELETE FROM Villains WHERE Id = @villainId";
 
         public const string printAllMinionNames = @"SELECT Name FROM Minions";
+
+        public const string increaseMinionAge1 = @"SELECT Name, Age FROM Minions";
+
+        public const string increaseMinionAge2 = @" UPDATE Minions
+                                                      SET Name = LOWER(LEFT(Name, 1)) + SUBSTRING(Name, 2, LEN(Name))
+                                                         ,Age += 1
+                                                    WHERE Id = @Id";
+
+        public const string increaseAgeStoredProcedure1 = @"EXEC [dbo].[usp_GetOlder] @MinionId";
+
+        public const string increaseAgeStoredProcedure2 = @"SELECT Name, Age FROM Minions WHERE Id = @Id";
     }
 }
