@@ -22,10 +22,10 @@ public class Song
 
     public DateTime CreatedOn { get; set; }
 
-    public Gerne Gerne { get; set; }
+    public Genre Gerne { get; set; }
 
     [ForeignKey(nameof(Album))]
-    public int AlbumId { get; set; }
+    public int? AlbumId { get; set; }
     public virtual Album Album { get; set; } = null!;
 
     [ForeignKey(nameof(Writer))]

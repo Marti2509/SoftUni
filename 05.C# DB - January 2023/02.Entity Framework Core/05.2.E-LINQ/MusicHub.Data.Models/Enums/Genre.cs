@@ -1,6 +1,6 @@
 ﻿namespace MusicHub.Data.Models.Enums
 {
-    public enum Gerne
+    public enum Genre
     {
         Blues = 0,
         Rap = 1,
