@@ -1,7 +1,8 @@
 # SoftUni
 
-### This repository is going be for all my projects and HWs in my SoftUni's courses! <br> <br> Feel free to check them.
+### This repository is going be for all my projects and HWs in my SoftUni's courses! <br> <br> Feel free to check them. 
 
+## SoftUni's C# Path
 ### [001.Programming Basics with JS](https://github.com/Marti2509/SoftUni/tree/main/001.Programming%20Basics%20with%20JS%20-%20Alone%202022)
 ### [01.Programming Basics with C#](https://github.com/Marti2509/SoftUni/tree/main/01.Programming%20Basics%20with%20C%23%20-%20November%202021)  - [SoftUni Site](https://softuni.bg/trainings/3513/programming-basics-with-csharp-november-2021)
 ### [02.Programming Fundamentals with C#](https://github.com/Marti2509/SoftUni/tree/main/02.Programming%20Fundamentals%20with%20C%23%20-%20January%202022) - [SoftUni Site](https://softuni.bg/trainings/3606/programming-fundamentals-with-csharp-january-2022)
@@ -15,7 +16,7 @@
 #### &nbsp; &nbsp; &nbsp; &nbsp; [05.1.MS SQL](https://github.com/Marti2509/SoftUni/tree/main/05.C%23%20DB%20-%20January%202023/01.MS%20SQL) - [SoftUni Site](https://softuni.bg/trainings/3965/ms-sql-january-2023)
 #### &nbsp; &nbsp; &nbsp; &nbsp; [05.2.Entity Framework Core](https://github.com/Marti2509/SoftUni/tree/main/05.C%23%20DB%20-%20January%202023/02.Entity%20Framework%20Core) - [SoftUni Site](https://softuni.bg/trainings/3966/entity-framework-core-february-2023)
 
-## Mini Courses
+## SoftUni's Mini Courses
 ### [01.HTML & CSS](https://github.com/Marti2509/SoftUni/tree/main/Mini%20Courses/HTML%20%26%20CSS) - [SoftUni Site](https://softuni.bg/trainings/2286/html-css-mini-course)
 
 ## 📝 License
