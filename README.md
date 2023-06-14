@@ -15,6 +15,9 @@
 ### [05.C# DB](https://github.com/Marti2509/SoftUni/tree/main/05.C%23%20DB%20-%20January%202023)
 #### &nbsp; &nbsp; &nbsp; &nbsp; [05.1.MS SQL](https://github.com/Marti2509/SoftUni/tree/main/05.C%23%20DB%20-%20January%202023/01.MS%20SQL) - [SoftUni Site](https://softuni.bg/trainings/3965/ms-sql-january-2023)
 #### &nbsp; &nbsp; &nbsp; &nbsp; [05.2.Entity Framework Core](https://github.com/Marti2509/SoftUni/tree/main/05.C%23%20DB%20-%20January%202023/02.Entity%20Framework%20Core) - [SoftUni Site](https://softuni.bg/trainings/3966/entity-framework-core-february-2023)
+### [06.C# Web](https://github.com/Marti2509/SoftUni/tree/main/06.C%23%20Web%20-%20May%202023)
+#### &nbsp; &nbsp; &nbsp; &nbsp; [06.1.ASP.NET Fundamentals](https://github.com/Marti2509/SoftUni/tree/main/06.C%23%20Web%20-%20May%202023/01.ASP.NET%20Fundamentals) - [SoftUni Site](https://softuni.bg/trainings/4105/asp-net-fundamentals-may-2023)
+#### &nbsp; &nbsp; &nbsp; &nbsp; 06.2.ASP.NET Advanced - [SoftUni Site](https://softuni.bg/trainings/4107/asp-net-advanced-june-2023)
 
 ## SoftUni's Mini Courses
 ### [01.HTML & CSS](https://github.com/Marti2509/SoftUni/tree/main/Mini%20Courses/HTML%20%26%20CSS) - [SoftUni Site](https://softuni.bg/trainings/2286/html-css-mini-course)
