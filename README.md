@@ -24,3 +24,5 @@
 
 ## 📝 License
 This project is [MIT](https://github.com/Marti2509/SoftUni/blob/main/LICENSE) licensed. ©
+
+:)
